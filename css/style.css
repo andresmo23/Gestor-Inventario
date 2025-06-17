@@ -1,0 +1,300 @@
+/* Estilos Globales y Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif; /* Usamos Inter como se sugiere para apps web */
+  background-color: #f4f7f6; /* Un fondo suave para toda la página */
+  color: #333; /* Color de texto principal */
+  line-height: 1.6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+}
+
+/* Títulos */
+h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #34495e;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.4em;
+  color: #4a657e;
+  margin-bottom: 10px;
+}
+
+/* Secciones Generales */
+section {
+  background-color: #ffffff;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 12px; /* Bordes redondeados para todas las secciones */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  width: 100%;
+  max-width: 900px; /* Ancho máximo para legibilidad */
+}
+
+/* Formulario de Agregar/Actualizar Producto */
+#agregar-producto-form h2 {
+  color: #2980b9;
+}
+
+#agregar-producto-form form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas responsivas */
+  gap: 15px; /* Espacio entre los elementos del grid */
+}
+
+#agregar-producto-form input[type="text"],
+#agregar-producto-form input[type="number"],
+#agregar-producto-form select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #555;
+  transition: border-color 0.3s ease;
+}
+
+#agregar-producto-form input[type="text"]:focus,
+#agregar-producto-form input[type="number"]:focus,
+#agregar-producto-form select:focus {
+  border-color: #5fa8d3;
+  box-shadow: 0 0 0 3px rgba(95, 168, 211, 0.2);
+}
+
+/* Botones del Formulario */
+#agregar-producto-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05em;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#btn-agregar {
+  background-color: #27ae60; /* Verde */
+}
+
+#btn-agregar:hover {
+  background-color: #229954;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+}
+
+#btn-actualizar {
+  background-color: #f39c12; /* Naranja */
+}
+
+#btn-actualizar:hover:not(:disabled) {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(243, 156, 18, 0.3);
+}
+
+/* Estilos para el botón deshabilitado (tus estilos existentes, los mantengo y mejoro un poco) */
+button:disabled {
+  opacity: 0.5; /* Más evidente que está inactivo */
+  cursor: not-allowed;
+  background-color: #b0b0b0; /* Gris más neutral */
+  border-color: #909090;
+  color: #f0f0f0;
+  transform: none; /* Eliminar transformación si estaba en hover */
+  box-shadow: none;
+}
+
+/* Sección de Filtros y Búsqueda */
+#filtros-busqueda h2 {
+  color: #8e44ad;
+}
+
+#filtros-busqueda {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  gap: 15px;
+  align-items: center;
+}
+
+#filtros-busqueda input[type="text"],
+#filtros-busqueda select {
+  flex-grow: 1; /* Permite que crezcan para ocupar espacio */
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #555;
+}
+
+#filtros-busqueda button {
+  background-color: #3498db; /* Azul */
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+}
+
+#filtros-busqueda button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+#filtros-busqueda button i.bx {
+  font-size: 1.4em; /* Ajusta el tamaño del icono */
+}
+
+/* Sección de Resumen del Inventario */
+#resumen-inventario h2 {
+  color: #e74c3c;
+}
+
+#resumen-inventario p {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+#resumen-inventario p span {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#resumen-inventario ul {
+  list-style: none; /* Quitar viñetas */
+  padding-left: 0;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Listado en columnas */
+  gap: 8px;
+}
+
+#resumen-inventario ul li {
+  background-color: #ecf0f1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.95em;
+  color: #34495e;
+  font-weight: 500;
+}
+
+/* Sección de Listado de Inventario (Tabla) */
+#listado-inventario h2 {
+  color: #2ecc71;
+}
+
+#listado-inventario table {
+  width: 100%;
+  border-collapse: separate; /* Permite el border-radius en las celdas */
+  border-spacing: 0;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden; /* Asegura que los bordes redondeados se apliquen bien */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#listado-inventario thead tr {
+  background-color: #34495e; /* Fondo oscuro para el encabezado */
+  color: #fff;
+  text-align: left;
+}
+
+#listado-inventario th,
+#listado-inventario td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0; /* Líneas de separación horizontales */
+}
+
+#listado-inventario th {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+#listado-inventario tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Rayas alternas para mejor legibilidad */
+}
+
+#listado-inventario tbody tr:hover {
+  background-color: #eef7fc; /* Resaltar fila al pasar el ratón */
+  transition: background-color 0.2s ease;
+}
+
+/* Estilos específicos para celdas de Acciones */
+#listado-inventario td:last-child {
+  text-align: center;
+}
+
+#listado-inventario td divbotones {
+  display: flex;
+  gap: 8px; /* Espacio entre los botones de editar y eliminar */
+  justify-content: center;
+  align-items: center;
+}
+
+#listado-inventario td button {
+  background: none; /* Quitar fondo de los botones de acción */
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#listado-inventario td button:hover {
+  transform: translateY(-1px);
+}
+
+#listado-inventario td button.btn-editar {
+  color: #2ecc71; /* Icono verde para editar */
+}
+
+#listado-inventario td button.btn-editar:hover {
+  background-color: rgba(46, 204, 113, 0.1);
+}
+
+#listado-inventario td button.btn-eliminar {
+  color: #e74c3c; /* Icono rojo para eliminar */
+}
+
+#listado-inventario td button.btn-eliminar:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+#listado-inventario td button i.bx {
+  font-size: 1.2em; /* Tamaño del icono en la tabla */
+}
+
+/* Mantenimiento de tus estilos por defecto y mejora */
+button {
+  cursor: pointer;
+  outline: none;
+  border: none; /* Removido el border: 1px solid beige; para que mis estilos de fondo funcionen mejor */
+}
+
+/* El estilo :disabled ya está integrado y mejorado en la sección de botones */

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Inventario</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--Iconos desde boxicons-->
+    <link href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="title">Mi Gestor de Inventario</h1>
+
+    <section id="agregar-producto-form">
+      <h2>Agregar Nuevo Producto</h2>
+      <form action="#">
+        <input type="text" id="nombre-producto" placeholder="Nombre" />
+        <input type="number" id="precio-producto" placeholder="Precio" />
+        <input type="number" id="stock-producto" placeholder="Stock" />
+        <input type="text" id="descripcion-producto" placeholder="Descripcion" />
+        <input type="text" id="categoria-producto" placeholder="Categoría" />
+        <button id="btn-agregar">Agregar Producto</button>
+        <button id="btn-actualizar" disabled>Actualizar Producto</button>
+      </form>
+    </section>
+
+    <section id="filtros-busqueda">
+      <h2>Buscar y Filtrar</h2>
+      <input type="text" id="input-busqueda" placeholder="Buscar por nombre o ID" />
+      <button id="btn-buscar"><i class="bx bx-search"></i></button>
+      <select id="filtro-categoria"></select>
+    </section>
+
+    <section id="resumen-inventario">
+      <h2>Resumen del Inventario</h2>
+      <p>Valor Total del Inventario: <span id="valor-total-inventario"></span></p>
+      <p>Productos Totales: <span id="cantidad-total-productos"></span></p>
+      <div>
+        <h3>Cantidad por Categoria:</h3>
+        <ul id="lista-categorias"></ul>
+      </div>
+    </section>
+
+    <section id="listado-inventario">
+      <h2>Inventario Actual</h2>
+      <table id="tabla-prodcutos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Descripción</th>
+            <th>Categoría</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="body-tabla-productos"></tbody>
+      </table>
+    </section>
+
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
