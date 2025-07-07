@@ -180,6 +180,7 @@ tBody.addEventListener("click", (event) => {
 
           // asignacion de la variable global que guarda el idproductoeditar
           idProductoAEditar = idProducto;
+          window.location.hash = "#agregar-producto-form";
         }
         break;
     }
